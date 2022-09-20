@@ -7,13 +7,6 @@ import MainController from './controllers/MainController';
 polyfills();
 clickAutoBlur();
 
-// Disable the turbo's default progress bar:
-const { progressBar } = session.adapter;
-progressBar.progressElement.remove();
-progressBar.stylesheetElement.remove();
-session.adapter.showProgressBar = () => {};
-start();
-
 const application = Application.start();
 application.register('main', MainController);
 

@@ -1,8 +1,3 @@
-/**
- * @file Global environment configuration.
- * @author Daniil Filippov <d.filippov@make.st>
- */
-
 const path = require('path');
 
 const devServerHost = '0.0.0.0';
