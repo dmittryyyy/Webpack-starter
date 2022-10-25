@@ -1,0 +1,25 @@
+@import './media';
+
+@mixin grid-container {
+  padding: 0 20px;
+}
+
+@mixin grid {
+  display: grid;
+
+  @include screen-scanty-up {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include screen-small-up {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include screen-medium-up {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  @include screen-large-up {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}

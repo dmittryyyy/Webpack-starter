@@ -1,9 +1,9 @@
 @use '../variables' as *;
+@use '../placeholders' as *;
 
 footer {
+  @include grid;
   color: $color-grey;
-  display: flex;
-  flex-direction: column;
 }
 
 .footer__text {
