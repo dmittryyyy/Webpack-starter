@@ -1,5 +1,25 @@
 @use '../variables' as *;
 
 footer {
-    color: $color-grey;
+  color: $color-grey;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__text {
+  color: $color-black;
+  font-weight: 600;
+}
+
+.footer__icon-wrapper {
+  background: $color-brown;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+}
+
+.footer__icon {
+  width: 32px;
+  height: 32px;
+  fill: $color-white;
 }
