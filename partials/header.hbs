@@ -7,16 +7,20 @@
   <meta name="turbo-cache-control" content="no-cache">
   <title>
     {{#if pageTitle}}
-    {{pageTitle}}
+      {{pageTitle}}
     {{/if}}
   </title>
-  <link rel="stylesheet" href="app.css" />
+  <link rel="stylesheet" href="app.css"/>
   <script src="vendor.js" async></script>
   <script src="app.js" async></script>
   <script src="/webpack-dev-server.js" async></script>
 </head>
 
 <body data-controller="cursor">
-  <header class="header">
-    <h1>Header</h1>
-  </header>
+<div class="page-container">
+<header class="header">
+  <div class="header-wrapper">
+    <h1 class="header__title">Hello World!</h1>
+    <h2 class="header__subtitle">This is the starter Webpack build</h2>
+  </div>
+</header>

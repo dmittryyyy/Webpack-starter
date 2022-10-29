@@ -45,7 +45,7 @@ const config = {
         },
       },
       {
-        test: /\.(png|jpg|svg|ttf|woff|woff2)$/,
+        test: /\.(png|jpg|jpeg|svg|ttf|woff|woff2)$/,
         use: [{
           loader: 'file-loader',
         }],

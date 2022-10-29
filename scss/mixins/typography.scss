@@ -1,0 +1,76 @@
+@use "sass:list" as list;
+@use "../functions/typography" as *;
+@use "media-queries" as *;
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Base mixin for applying font-size and line-height values
+/// @param {List} $sizes - A list of `font-size` integer values (in pixels) for the each breakpoint.
+/// @param {Boolean} $isHeading [false] - Whether styles are applying to some sort of heading.
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@mixin typo-make-sizes($sizes, $isHeading: false) {
+  // TODO: Sass currently doesn't support dynamic mixins invocation — define these crutches variables :(
+  $tiny: list.nth($sizes, 1) * 1px;
+  $small: list.nth($sizes, 2) * 1px;
+  $medium: list.nth($sizes, 3) * 1px;
+  $large: list.nth($sizes, 4) * 1px;
+  $huge: list.nth($sizes, 5) * 1px;
+
+  @if ($isHeading) {
+    font-size: $tiny;
+    line-height: typo-heading-line-height($tiny);
+
+    @if ($small != $tiny) {
+      @include screen-small-up {
+        font-size: $small;
+        line-height: typo-heading-line-height($small);
+      }
+    }
+    @if ($medium != $small) {
+      @include screen-medium-up {
+        font-size: $medium;
+        line-height: typo-heading-line-height($medium);
+      }
+    }
+    @if ($large != $medium) {
+      @include screen-large-up {
+        font-size: $large;
+        line-height: typo-heading-line-height($large);
+      }
+    }
+    @if ($huge != $large) {
+      @include screen-large-up {
+        font-size: $huge;
+        line-height: typo-heading-line-height($huge);
+      }
+    }
+  } @else {
+    font-size: $tiny;
+    line-height: typo-text-line-height($tiny);
+
+    @if ($small != $tiny) {
+      @include screen-small-up {
+        font-size: $small;
+        line-height: typo-text-line-height($small);
+      }
+    }
+    @if ($medium != $small) {
+      @include screen-medium-up {
+        font-size: $medium;
+        line-height: typo-text-line-height($medium);
+      }
+    }
+    @if ($large != $medium) {
+      @include screen-large-up {
+        font-size: $large;
+        line-height: typo-text-line-height($large);
+      }
+    }
+    @if ($huge != $large) {
+      @include screen-large-up {
+        font-size: $huge;
+        line-height: typo-text-line-height($huge);
+      }
+    }
+  }
+}

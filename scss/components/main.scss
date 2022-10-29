@@ -1,0 +1,24 @@
+@use '../variables' as *;
+@use '../placeholders' as *;
+@use '../mixins' as *;
+
+.main {
+  padding: 24px 0;
+  flex: 1 1 auto;
+}
+
+.main__text {
+  @include grid-container;
+  text-align: center;
+  top: 32px;
+  color: $color-white;
+  @include typo-make-sizes($typo-paragraph-lead-sizes);
+
+  @include screen-small-up {
+    @include typo-make-sizes($typo-paragraph-lead-sizes);
+  }
+
+  @include screen-medium-up {
+    @include typo-make-sizes($typo-h2-sizes);
+  }
+}

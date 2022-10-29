@@ -1,25 +1,50 @@
 @use '../variables' as *;
 @use '../placeholders' as *;
+@use '../mixins' as *;
 
 footer {
-  @include grid;
-  color: $color-grey;
+  background: rgb($color-black, 0.64);
+  border-top: 2px solid $color-white;
+}
+
+.footer-wrapper {
+  @include grid-container;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include screen-small-up {
+    flex-direction: column;
+  }
+
+  @include screen-medium-up {
+    flex-direction: unset;
+  }
 }
 
 .footer__text {
-  color: $color-black;
+  color: $color-white;
   font-weight: 600;
-}
+  @include typo-make-sizes($typo-h2-sizes);
+  text-align: center;
+  margin-top: 12px;
 
-.footer__icon-wrapper {
-  background: $color-brown;
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
+  @include screen-small-up {
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  @include screen-medium-up {
+    margin-top: 0;
+    text-align: left;
+  }
 }
 
 .footer__icon {
-  width: 32px;
-  height: 32px;
-  fill: $color-white;
+  width: 128px;
+  height: 128px;
 }
+
+

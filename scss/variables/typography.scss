@@ -1,0 +1,48 @@
+/// Base text size on desktop.
+$typo-base-text-desktop: 18px !default;
+
+/// Base text size on mobile phones.
+$typo-base-text-mobile: 16px !default;
+
+
+/// h1 heading's sizes on each breakpoint.
+$typo-h1-sizes: (24, 24, 38, 48, 56) !default;
+/// The design system's h1 heading's sizes on each breakpoint
+/// (articles version).
+/// @type List
+$typo-h1-article-sizes: (24, 24, 32, 40, 44) !default;
+/// h2 heading's sizes on each breakpoint.
+$typo-h2-sizes: (22, 22, 26, 30, 36) !default;
+/// h3 heading's sizes on each breakpoint.
+$typo-h3-sizes: (18, 18, 20, 22, 24) !default;
+/// h4 heading's sizes on each breakpoint.
+$typo-h4-sizes: (16, 16, 16, 18, 18) !default;
+
+/// The design system's headings sizes on each breakpoint.
+$typo-headings-sizes: (
+  h1: $typo-h1-sizes,
+  h2: $typo-h2-sizes,
+  h3: $typo-h3-sizes,
+  h4: $typo-h4-sizes,
+) !default;
+
+
+/// p.lead-big paragraph's sizes on each breakpoint.
+$typo-paragraph-big-sizes: (22, 22, 26, 28, 28) !default;
+/// p.lead paragraph's sizes on each breakpoint.
+$typo-paragraph-lead-sizes: (18, 18, 20, 22, 24) !default;
+/// default text paragraph's sizes on each breakpoint.
+$typo-paragraph-base-sizes: (16, 16, 18, 18, 18) !default;
+/// p.nav paragraph's sizes on each breakpoint.
+$typo-paragraph-nav-sizes: (14, 14, 16, 16, 16) !default;
+/// p.small paragraph's sizes on each breakpoint.
+$typo-paragraph-small-sizes: (12, 12, 14, 14, 14) !default;
+
+/// The design system's paragraphs sizes on each breakpoint.
+$typo-paragraph-sizes: (
+  lead-big: $typo-paragraph-big-sizes,
+  lead: $typo-paragraph-lead-sizes,
+  text: $typo-paragraph-base-sizes,
+  nav: $typo-paragraph-nav-sizes,
+  small: $typo-paragraph-small-sizes,
+) !default;

@@ -1,0 +1,29 @@
+@use './variables' as *;
+
+$body-font-family: 'Inter', Helvetica, Arial, sans-serif;;
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  src: url('../fonts/Pragmatica-Book.ttf') format('truetype-variations');
+}
+
+body {
+  font-family: $body-font-family;
+  font-size: $typo-base-text-desktop;
+}
+
+strong,
+.strong {
+  font-weight: 500;
+}
+
+//img {
+//  max-width: 100%;
+//  white-space: nowrap;
+//  overflow: hidden;
+//  text-overflow: ellipsis;
+//  font-size: 1em;
+//}
