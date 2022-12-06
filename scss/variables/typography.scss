@@ -46,3 +46,10 @@ $typo-paragraph-sizes: (
   nav: $typo-paragraph-nav-sizes,
   small: $typo-paragraph-small-sizes,
 ) !default;
+
+/// The design system's base text line-height value.
+$typo-line-height-text: calc(1em + 8px) !default;
+
+/// The design system's headings line-height value.
+$typo-line-height-heading: calc(1em + 4px) !default;
+

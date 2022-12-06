@@ -1,5 +1,6 @@
 @use "sass:list" as list;
 @use "../functions/typography" as *;
+@use "../variables/typography" as *;
 @use "media-queries" as *;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -74,3 +75,16 @@
     }
   }
 }
+
+//mixin to pass your values
+//default size - calc(1em + 4px), to do this, instead of the second parameter, specify false
+@mixin make-size($size, $lineHeight) {
+  font-size: $size + px;
+
+  @if ($lineHeight) {
+    line-height: $lineHeight + px;
+  } @else {
+    line-height: $typo-line-height-heading;
+  }
+}
+

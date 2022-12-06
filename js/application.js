@@ -2,11 +2,16 @@ import { Application } from 'stimulus';
 import { session, start } from '@hotwired/turbo';
 import polyfills from './polyfills';
 import { clickAutoBlur } from './normalizers';
-import MainController from './controllers/MainController';
+
+// import your controllers
+import {
+  MainController,
+} from './controllers';
 
 polyfills();
 clickAutoBlur();
 
+// connection your controllers
 const application = Application.start();
 application.register('main', MainController);
 

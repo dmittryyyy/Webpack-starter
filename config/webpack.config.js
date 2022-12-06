@@ -48,6 +48,10 @@ const config = {
         test: /\.(png|jpg|jpeg|svg|ttf|woff|woff2)$/,
         use: [{
           loader: 'file-loader',
+          // Uncomment if fonts are not used
+          // options: {
+          //   name: 'fonts/[name].[ext]',
+          // },
         }],
       },
       {

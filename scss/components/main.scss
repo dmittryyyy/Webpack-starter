@@ -14,10 +14,6 @@
   color: $color-white;
   @include typo-make-sizes($typo-paragraph-lead-sizes);
 
-  @include screen-small-up {
-    @include typo-make-sizes($typo-paragraph-lead-sizes);
-  }
-
   @include screen-medium-up {
     @include typo-make-sizes($typo-h2-sizes);
   }
