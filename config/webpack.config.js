@@ -138,7 +138,6 @@ if (environment.mode === 'production') {
     open: true,
     host: environment.devServer.host,
     port: environment.devServer.port,
-    disableHostCheck: true,
     // headers: {
     //   'Access-Control-Allow-Origin': '*',
     // },
@@ -152,7 +151,6 @@ if (environment.mode === 'production') {
     compress: true, // enable gzip compression
     hot: true, // hot module replacement. Depends on HotModuleReplacementPlugin
     // noInfo: true, // only errors & warns on hot reload
-    stats: 'minimal',
   };
   config.devtool = 'source-map';
 }
