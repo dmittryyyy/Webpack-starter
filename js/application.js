@@ -1,5 +1,4 @@
 import { Application } from 'stimulus';
-import { session, start } from '@hotwired/turbo';
 import polyfills from './polyfills';
 import { clickAutoBlur } from './normalizers';
 

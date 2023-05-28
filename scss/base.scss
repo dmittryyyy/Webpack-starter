@@ -1,29 +1,19 @@
 @use './variables' as *;
 @use './mixins' as *;
 
+//Variable to set the maximum width of the page container
+$max-width-page-container: 1080px !default;
+
 a {
   text-decoration: none;
 }
 
 body {
   background-color: $color-white;
-  // color: $color-dark-brown;
+  color: $color-black;
 }
 
-.page-container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-
-  &::before {
-    content: '';
-    position: fixed;
-    left: 0; right: 0;
-    top: 0; bottom: 0;
-    z-index: -1;
-    background: url("/images/pictures/main-bg.jpg");
-    background-repeat: no-repeat;
-    filter: blur(3px);
-  }
+.grid-container {
+  @include grid-container;
 }
 
