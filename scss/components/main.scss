@@ -16,5 +16,5 @@
   }
   top: 32px;
   color: $color-white;
-  @include typo-make-sizes($typo-h1-sizes);
+  @include typo-make-h1;
 }

@@ -1,4 +1,5 @@
 @use './variables' as *;
+@use './mixins' as *;
 
 $body-font-family: 'Pragmatica', Helvetica, Arial, sans-serif;;
 
@@ -12,7 +13,7 @@ $body-font-family: 'Pragmatica', Helvetica, Arial, sans-serif;;
 
 body {
   font-family: $body-font-family;
-  font-size: $typo-base-text-desktop;
+  @include typo-make-text;
 }
 
 strong,
@@ -20,10 +21,10 @@ strong,
   font-weight: 500;
 }
 
-//img {
-//  max-width: 100%;
-//  white-space: nowrap;
-//  overflow: hidden;
-//  text-overflow: ellipsis;
-//  font-size: 1em;
-//}
+img {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1em;
+}

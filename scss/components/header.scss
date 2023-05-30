@@ -25,12 +25,12 @@ header {
   @include screen-medium-up {
     justify-self: start;
   }
-  @include typo-make-sizes($typo-h1-sizes);
+  @include typo-make-h1;
 }
 
 .header__subtitle {
   @include grid-columns-span((small: 4, medium: 5, large: 7));
-  @include typo-make-sizes($typo-h2-sizes);
+  @include typo-make-h2;
   justify-self: center;
   text-align: center;
   @include screen-small-up {

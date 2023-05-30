@@ -27,7 +27,7 @@ footer {
 .footer__text {
   color: $color-white;
   font-weight: 600;
-  @include typo-make-sizes($typo-h2-sizes);
+  @include typo-make-h2;
   text-align: center;
   margin-top: 12px;
 

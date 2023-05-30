@@ -1,3 +1,15 @@
+@use "../mixins/media-queries" as *;
+@use "../variables/grid" as *;
+
+:root {
+  --width-scrollbar: 8px;
+  @include screen-small-down {
+    --width-scrollbar: 0px;
+  }
+}
+
+$width-scrollbar: var(--width-scrollbar);
+
 /// A placeholder for hiding the system scrollbar.
 %helper-hidden-system-scrollbar {
   overflow-x: scroll;
@@ -19,4 +31,16 @@
   right: 0;
   bottom: 0;
   content: "";
+}
+
+/// A placeholder for indent from the scrollbar
+/// for pseudo-elements in grid-container
+%helper-indent-inner-pseudo-element-scrollbar {
+  right: calc((-1 * $grid-padding-size) + $width-scrollbar);
+  left: calc(-1 * $grid-padding-size);
+}
+
+%helper-indent-outer-pseudo-element-scrollbar {
+  right: calc((-1 * $grid-padding-size) + ($width-scrollbar + $grid-padding-size));
+  left: calc(-1 * $grid-padding-size);
 }
