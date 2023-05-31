@@ -1,5 +1,5 @@
-@use "../variables/colors" as *;
-@use "../variables/typography" as *;
+@use '../variables/colors' as *;
+@use '../variables/typography' as *;
 
 /// Base mixin for applying `font-size` and `line-height` values according to the design system.
 /// @param {Length} $size - Variable or static font-size value.

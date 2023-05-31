@@ -3,16 +3,12 @@
 @use '../mixins' as *;
 
 header {
+  @include grid;
+  align-items: center;
   background: rgb($color-black, 0.64);
   color: $color-white;
-  padding: 12px 0;
+  padding: $indent-12 $grid-gutter-size;
   border-bottom: 4px solid $color-black;
-}
-
-.header-wrapper {
-  @include grid;
-  @include grid-container;
-  align-items: center;
 }
 
 .header__title {

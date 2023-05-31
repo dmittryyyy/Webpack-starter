@@ -1,4 +1,4 @@
-@use "../variables/grid" as *;
+@use '../variables/grid' as *;
 
 /// A media query for selecting only screens with viewport width < 332px.
 @mixin screen-tiny-only {

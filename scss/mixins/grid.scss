@@ -1,6 +1,6 @@
-@use "sass:map";
-@use "media-queries" as *;
-@use "../variables/grid" as *;
+@use 'sass:map';
+@use 'media-queries' as *;
+@use '../variables/grid' as *;
 
 /// A mixin for the base styles of the grid container according to the design system.
 @mixin grid-container {

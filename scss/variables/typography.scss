@@ -1,5 +1,5 @@
-@use "../mixins/media-queries" as *;
-@use "../functions/linear-interpolation" as *;
+@use '../mixins/media-queries' as *;
+@use '../functions/linear-interpolation' as *;
 @use "grid" as *;
 
 @function _small-sizes-interpolation($min, $max) {

@@ -1,0 +1,35 @@
+//Mixin for padding and margin
+
+////////////////////////
+////////Margins////////
+//////////////////////
+@mixin indent-outer($vertical, $horizontal) {
+  margin: $vertical + px $horizontal + px;
+}
+
+//Margin vertical
+@mixin indent-outer-vertical($top, $bottom) {
+  margin: $top + px $bottom + px 0 0;
+}
+
+//Margin horizontal
+@mixin indent-outer-horizontal($left, $right) {
+  margin: $left + px  $right + px 0 0;
+}
+
+////////////////////////
+////////Paddings////////
+//////////////////////
+@mixin indent-inner($vertical, $horizontal) {
+  padding: $vertical + px $horizontal + px;
+}
+
+//Padding vertical
+@mixin indent-inner-vertical($top, $bottom) {
+  padding: $top + px $bottom + px 0 0;
+}
+
+//Padding horizontal
+@mixin indent-inner-horizontal($left, $right) {
+  margin: $left + px  $right + px 0 0;
+}
