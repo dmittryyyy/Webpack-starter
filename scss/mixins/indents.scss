@@ -1,35 +1,61 @@
 //Mixin for padding and margin
+//In the case of passing a variable to the mixin,
+// you need to specify 3 as the true parameter.
 
 ////////////////////////
 ////////Margins////////
 //////////////////////
-@mixin indent-outer($vertical, $horizontal) {
-  margin: $vertical + px $horizontal + px;
+@mixin indent-outer($vertical, $horizontal, $interpolation) {
+  @if $interpolation {
+    margin: $vertical $horizontal;
+  } @else {
+    margin: $vertical + px $horizontal + px;
+  }
 }
 
 //Margin vertical
-@mixin indent-outer-vertical($top, $bottom) {
-  margin: $top + px $bottom + px 0 0;
+@mixin indent-outer-vertical($top, $bottom, $interpolation) {
+  @if $interpolation {
+    margin: $top $bottom 0 0;
+  } @else {
+    margin: $top + px $bottom + px 0 0;
+  }
 }
 
 //Margin horizontal
-@mixin indent-outer-horizontal($left, $right) {
-  margin: $left + px  $right + px 0 0;
+@mixin indent-outer-horizontal($left, $right, $interpolation) {
+  @if $interpolation {
+    margin: $left $right 0 0;
+  } @else {
+    margin: $left + px $right + px 0 0;
+  }
 }
 
 ////////////////////////
 ////////Paddings////////
 //////////////////////
-@mixin indent-inner($vertical, $horizontal) {
-  padding: $vertical + px $horizontal + px;
+@mixin indent-inner($vertical, $horizontal, $interpolation) {
+  @if $interpolation {
+    padding: $vertical $horizontal;
+  } @else {
+    padding: $vertical + px $horizontal + px;
+  }
 }
 
 //Padding vertical
-@mixin indent-inner-vertical($top, $bottom) {
-  padding: $top + px $bottom + px 0 0;
+@mixin indent-inner-vertical($top, $bottom, $interpolation) {
+  @if $interpolation {
+    padding: $top $bottom  0 0;
+  } @else {
+    padding: $top + px $bottom + px 0 0;
+  }
 }
 
 //Padding horizontal
-@mixin indent-inner-horizontal($left, $right) {
-  margin: $left + px  $right + px 0 0;
+@mixin indent-inner-horizontal($left, $right, $interpolation) {
+  @if $interpolation {
+    padding: $left  $right  0 0;
+  } @else {
+    padding: $left + px $right + px 0 0;
+  }
 }
