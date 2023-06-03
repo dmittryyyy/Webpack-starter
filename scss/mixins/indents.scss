@@ -16,18 +16,18 @@
 //Margin vertical
 @mixin indent-outer-vertical($top, $bottom, $interpolation) {
   @if $interpolation {
-    margin: $top $bottom 0 0;
+    margin: $top 0 $bottom 0;
   } @else {
-    margin: $top + px $bottom + px 0 0;
+    margin: $top + px 0 $bottom + px 0;
   }
 }
 
 //Margin horizontal
 @mixin indent-outer-horizontal($left, $right, $interpolation) {
   @if $interpolation {
-    margin: $left $right 0 0;
+    margin: 0 $right 0 $left;
   } @else {
-    margin: $left + px $right + px 0 0;
+    margin: 0 $right + px 0 $left + px;
   }
 }
 
@@ -45,17 +45,17 @@
 //Padding vertical
 @mixin indent-inner-vertical($top, $bottom, $interpolation) {
   @if $interpolation {
-    padding: $top $bottom  0 0;
+    padding: $top 0 $bottom 0;
   } @else {
-    padding: $top + px $bottom + px 0 0;
+    padding: $top + px  0 $bottom + px 0;
   }
 }
 
 //Padding horizontal
 @mixin indent-inner-horizontal($left, $right, $interpolation) {
   @if $interpolation {
-    padding: $left  $right  0 0;
+    padding: 0 $right 0 $left;
   } @else {
-    padding: $left + px $right + px 0 0;
+    padding: 0 $right + px 0 $left + px;
   }
 }
