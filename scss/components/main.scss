@@ -3,18 +3,39 @@
 
 .main {
   @include grid;
+  position: relative;
+  grid-auto-rows: max-content;
   padding: 24px $grid-gutter-size 24px $grid-gutter-size;
   flex: 1 1 auto;
   background-size: cover;
   background-position: center;
   height: 100vh;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(0, 0, 0, .5);
+  }
 }
 
 .main__text {
   @include grid-with-offset((medium: 2, large: 3, huge: 2)) {
     @include grid-columns-span((small: 4, medium: 4, large: 6, huge: 8));
   }
-  top: 32px;
+  z-index: 1;
   color: $color-white;
-  @include typo-make-h1;
+  @include typo-make-h2;
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  a {
+    @include typo-make-h3;
+    @include typo-text-link;
+    color: $color-pink;
+  }
 }

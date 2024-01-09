@@ -5,57 +5,37 @@
 ////////////////////////
 ////////Margins////////
 //////////////////////
-@mixin indent-outer($vertical, $horizontal, $interpolation) {
-  @if $interpolation {
-    margin: $vertical $horizontal;
-  } @else {
-    margin: $vertical + px $horizontal + px;
-  }
+@mixin margin($vertical, $horizontal) {
+  margin: $vertical $horizontal;
 }
 
 //Margin vertical
-@mixin indent-outer-vertical($top, $bottom, $interpolation) {
-  @if $interpolation {
-    margin: $top 0 $bottom 0;
-  } @else {
-    margin: $top + px 0 $bottom + px 0;
-  }
+@mixin margin-v($top, $bottom) {
+  margin-top: $top;
+  margin-bottom: $bottom;
 }
 
 //Margin horizontal
-@mixin indent-outer-horizontal($left, $right, $interpolation) {
-  @if $interpolation {
-    margin: 0 $right 0 $left;
-  } @else {
-    margin: 0 $right + px 0 $left + px;
-  }
+@mixin margin-h($left, $right) {
+  margin-left: $left;
+  margin-right: $right;
 }
 
 ////////////////////////
 ////////Paddings////////
 //////////////////////
-@mixin indent-inner($vertical, $horizontal, $interpolation) {
-  @if $interpolation {
-    padding: $vertical $horizontal;
-  } @else {
-    padding: $vertical + px $horizontal + px;
-  }
+@mixin padding($vertical, $horizontal) {
+  padding: $vertical $horizontal;
 }
 
 //Padding vertical
-@mixin indent-inner-vertical($top, $bottom, $interpolation) {
-  @if $interpolation {
-    padding: $top 0 $bottom 0;
-  } @else {
-    padding: $top + px  0 $bottom + px 0;
-  }
+@mixin padding-v($top, $bottom) {
+  padding-top: $top;
+  padding-bottom: $bottom;
 }
 
 //Padding horizontal
-@mixin indent-inner-horizontal($left, $right, $interpolation) {
-  @if $interpolation {
-    padding: 0 $right 0 $left;
-  } @else {
-    padding: 0 $right + px 0 $left + px;
-  }
+@mixin padding-h($left, $right) {
+  padding-left: $left;
+  padding-right: $right;
 }

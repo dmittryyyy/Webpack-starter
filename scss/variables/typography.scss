@@ -2,6 +2,8 @@
 @use '../functions/linear-interpolation' as *;
 @use "grid" as *;
 
+////Variable values can be changed in accordance with your design layout or add new ones
+
 @function _small-sizes-interpolation($min, $max) {
   @return linear-interpolation($grid-container-small-min, $min, $grid-container-small-max, $max);
 }
@@ -18,132 +20,69 @@
   @return linear-interpolation($grid-container-huge-min, $min, $grid-container-huge-max, $max);
 }
 
-$typo-big-digits-size-small-down: 120px;
-/// The design system's infographics digits largest size.
-$typo-big-digits-size-huge-up: 160px;
-/// The design system's infographics digits size on small screens.
-$typo-big-digits-size-small: _small-sizes-interpolation(120px, $typo-big-digits-size-huge-up);
-/// The design system's infographics digits size on medium screens.
-$typo-big-digits-size-medium: _medium-sizes-interpolation(80px, 120px);
-/// The design system's infographics digits size on large screens.
-$typo-big-digits-size-large: _large-sizes-interpolation(120px, $typo-big-digits-size-huge-up);
-/// The design system's infographics digits size on huge screens.
-$typo-big-digits-size-huge: $typo-big-digits-size-huge-up;
-
-/// The design system's big h1 heading's smallest size.
-$typo-big-h1-size-small-down: 44px;
-/// The design system's big h1 heading's largest size.
-$typo-big-h1-size-huge-up: 72px;
-/// The design system's big h1 heading's size on small screens.
-$typo-big-h1-size-small: _small-sizes-interpolation($typo-big-h1-size-small-down, 54px);
-/// The design system's big h1 heading's size on medium screens.
-$typo-big-h1-size-medium: _medium-sizes-interpolation($typo-big-h1-size-small-down, 54px);
-/// The design system's big h1 heading's size on large screens.
-$typo-big-h1-size-large: _large-sizes-interpolation(54px, $typo-big-h1-size-huge-up);
-/// The design system's big h1 heading's size on huge screens.
-$typo-big-h1-size-huge: $typo-big-h1-size-huge-up;
-
-/// The design system's Libel h2 heading's smallest size.
-$typo-libel-h2-size-small-down: 24px;
-/// The design system's Libel h2 heading's largest size.
-$typo-libel-h2-size-huge-up: 48px;
-/// The design system's Libel h2 size on small screens.
-$typo-libel-h2-size-small: _small-sizes-interpolation(24px, 32px);
-/// The design system's Libel h2 size on medium screens.
-$typo-libel-h2-size-medium: _medium-sizes-interpolation(24px, 32px);
-/// The design system's Libel h2 size on large screens.
-$typo-libel-h2-size-large: _large-sizes-interpolation(32px, $typo-libel-h2-size-huge-up);
-/// The design system's Libel h2 size on huge screens.
-$typo-libel-h2-size-huge: $typo-libel-h2-size-huge-up;
-
-/// The design system's Libel h2 heading's smallest size.
-$typo-libel-h3-size-small-down: 16px;
-/// The design system's Libel h2 heading's largest size.
-$typo-libel-h3-size-huge-up: 32px;
-/// The design system's Libel h2 size on small screens.
-$typo-libel-h3-size-small: _small-sizes-interpolation($typo-libel-h3-size-small-down, 24px);
-/// The design system's Libel h2 size on medium screens.
-$typo-libel-h3-size-medium: _medium-sizes-interpolation($typo-libel-h3-size-small-down, 24px);
-/// The design system's Libel h2 size on large screens.
-$typo-libel-h3-size-large: _large-sizes-interpolation(24px, $typo-libel-h3-size-huge-up);
-/// The design system's Libel h2 size on huge screens.
-$typo-libel-h3-size-huge: $typo-libel-h3-size-huge-up;
-
-/// The design system's Libel h2 heading's smallest size.
-$typo-libel-h4-size-small-down: 16px;
-/// The design system's Libel h2 heading's largest size.
-$typo-libel-h4-size-huge-up: 24px;
-/// The design system's Libel h2 size on small screens.
-$typo-libel-h4-size-small: _small-sizes-interpolation($typo-libel-h4-size-small-down, 18px);
-/// The design system's Libel h2 size on medium screens.
-$typo-libel-h4-size-medium: _medium-sizes-interpolation($typo-libel-h4-size-small-down, 18px);
-/// The design system's Libel h2 size on large screens.
-$typo-libel-h4-size-large: _large-sizes-interpolation(18px, $typo-libel-h4-size-huge-up);
-/// The design system's Libel h2 size on huge screens.
-$typo-libel-h4-size-huge: $typo-libel-h4-size-huge-up;
-
 /// The design system's h1 heading's smallest size.
-$typo-h1-size-small-down: 32px;
+$typo-h1-size-small-down: 48px;
 /// The design system's h1 heading's largest size.
-$typo-h1-size-huge-up: 48px;
+$typo-h1-size-huge-up: 64px;
 /// The design system's h1 heading's size on small screens.
-$typo-h1-size-small: _small-sizes-interpolation($typo-h1-size-small-down, 40px);
+$typo-h1-size-small: _small-sizes-interpolation($typo-h1-size-small-down, 54px);
 /// The design system's h1 heading's size on medium screens.
-$typo-h1-size-medium: _medium-sizes-interpolation($typo-h1-size-small-down, 40px);
+$typo-h1-size-medium: _medium-sizes-interpolation($typo-h1-size-small-down, 54px);
 /// The design system's h1 heading's size on large screens.
-$typo-h1-size-large: _large-sizes-interpolation(40px, $typo-h1-size-huge-up);
+$typo-h1-size-large: _large-sizes-interpolation(54px, $typo-h1-size-huge-up);
 /// The design system's h1 heading's size on huge screens.
 $typo-h1-size-huge: $typo-h1-size-huge-up;
 
 /// The design system's h2 heading's smallest size.
-$typo-h2-size-small-down: 20px;
+$typo-h2-size-small-down: 32px;
 /// The design system's h2 heading's largest size.
-$typo-h2-size-huge-up: 32px;
-/// The design system's h2 heading's size on small screens.
-$typo-h2-size-small: _small-sizes-interpolation($typo-h2-size-small-down, 24px);
-/// The design system's h2 heading's size on medium screens.
-$typo-h2-size-medium: _medium-sizes-interpolation($typo-h2-size-small-down, 24px);
-/// The design system's h2 heading's size on large screens.
-$typo-h2-size-large: _large-sizes-interpolation(24px, $typo-h2-size-huge-up);
-/// The design system's h2 heading's size on huge screens.
+$typo-h2-size-huge-up: 48px;
+/// The design system's h2 size on small screens.
+$typo-h2-size-small: _small-sizes-interpolation(24px, 32px);
+/// The design system's h2 size on medium screens.
+$typo-h2-size-medium: _medium-sizes-interpolation(24px, 32px);
+/// The design system's h2 size on large screens.
+$typo-h2-size-large: _large-sizes-interpolation(32px, $typo-h2-size-huge-up);
+/// The design system's h2 size on huge screens.
 $typo-h2-size-huge: $typo-h2-size-huge-up;
 
 /// The design system's h3 heading's smallest size.
 $typo-h3-size-small-down: 16px;
 /// The design system's h3 heading's largest size.
-$typo-h3-size-huge-up: 24px;
-/// The design system's h3 heading's size on small screens.
-$typo-h3-size-small: _small-sizes-interpolation(16px, 20px);
-/// The design system's h3 heading's size on medium screens.
-$typo-h3-size-medium: _medium-sizes-interpolation(16px, 20px);
-/// The design system's h3 heading's size on large screens.
-$typo-h3-size-large: _large-sizes-interpolation(20px, $typo-h3-size-huge-up);
-/// The design system's h3 heading's size on huge screens.
+$typo-h3-size-huge-up: 32px;
+/// The design system's h3 size on small screens.
+$typo-h3-size-small: _small-sizes-interpolation($typo-h3-size-small-down, 24px);
+/// The design system's h3 size on medium screens.
+$typo-h3-size-medium: _medium-sizes-interpolation($typo-h3-size-small-down, 24px);
+/// The design system's h3 size on large screens.
+$typo-h3-size-large: _large-sizes-interpolation(24px, $typo-h3-size-huge-up);
+/// The design system's h3 size on huge screens.
 $typo-h3-size-huge: $typo-h3-size-huge-up;
 
 /// The design system's h4 heading's smallest size.
 $typo-h4-size-small-down: 16px;
 /// The design system's h4 heading's largest size.
-$typo-h4-size-huge-up: 20px;
-/// The design system's h4 heading's size on small screens.
+$typo-h4-size-huge-up: 24px;
+/// The design system's h4 size on small screens.
 $typo-h4-size-small: _small-sizes-interpolation($typo-h4-size-small-down, 18px);
-/// The design system's h4 heading's size on medium screens.
+/// The design system's h4 size on medium screens.
 $typo-h4-size-medium: _medium-sizes-interpolation($typo-h4-size-small-down, 18px);
-/// The design system's h4 heading's size on large screens.
+/// The design system's h4 size on large screens.
 $typo-h4-size-large: _large-sizes-interpolation(18px, $typo-h4-size-huge-up);
-/// The design system's h4 heading's size on huge screens.
+/// The design system's h4 size on huge screens.
 $typo-h4-size-huge: $typo-h4-size-huge-up;
 
+/// The design system's lead heading's smallest size.
 $typo-lead-size-small-down: 20px;
-/// The design system's h3 heading's largest size.
+/// The design system's lead heading's largest size.
 $typo-lead-size-huge-up: 28px;
-/// The design system's h3 heading's size on small screens.
+/// The design system's lead heading's size on small screens.
 $typo-lead-size-small: _small-sizes-interpolation($typo-lead-size-small-down, 24px);
-/// The design system's h3 heading's size on medium screens.
+/// The design system's lead heading's size on medium screens.
 $typo-lead-size-medium: _medium-sizes-interpolation($typo-lead-size-small-down, 24px);
-/// The design system's h3 heading's size on large screens.
+/// The design system's lead heading's size on large screens.
 $typo-lead-size-large: _large-sizes-interpolation(24px, $typo-h3-size-huge-up);
-/// The design system's h3 heading's size on huge screens.
+/// The design system's lead heading's size on huge screens.
 $typo-lead-size-huge: $typo-h3-size-huge-up;
 
 /// The design system's default text's smallest size.
@@ -173,85 +112,60 @@ $typo-small-size-large: _large-sizes-interpolation($typo-small-size-small-down, 
 $typo-small-size-huge: $typo-small-size-huge-up;
 
 :root {
-  --typo-big-digits-size: #{$typo-big-digits-size-small-down};
-  --typo-big-h1-size: #{$typo-big-h1-size-small-down};
-  --typo-libel-h2-size: #{$typo-libel-h2-size-small-down};
-  --typo-libel-h3-size: #{$typo-libel-h3-size-small-down};
-  --typo-libel-h4-size: #{$typo-libel-h4-size-small-down};
-  --typo-h1-size: #{$typo-h1-size-small-down};
+  --typo-big-h1-size: #{$typo-h1-size-small-down};
   --typo-h2-size: #{$typo-h2-size-small-down};
   --typo-h3-size: #{$typo-h3-size-small-down};
   --typo-h4-size: #{$typo-h4-size-small-down};
+  --typo-h1-size: #{$typo-h1-size-small-down};
   --typo-lead-size: #{$typo-lead-size-small-down};
   --typo-text-size: #{$typo-text-size-small-down};
   --typo-small-size: #{$typo-small-size-small-down};
 
   @include screen-small-up {
-    --typo-big-digits-size: #{$typo-big-digits-size-small};
-    --typo-big-h1-size: #{$typo-big-h1-size-small};
-    --typo-libel-h2-size: #{$typo-libel-h2-size-small};
-    --typo-libel-h3-size: #{$typo-libel-h3-size-small};
-    --typo-libel-h4-size: #{$typo-libel-h4-size-small};
-    --typo-h1-size: #{$typo-h1-size-small};
+    --typo-big-h1-size: #{$typo-h1-size-small};
     --typo-h2-size: #{$typo-h2-size-small};
     --typo-h3-size: #{$typo-h3-size-small};
     --typo-h4-size: #{$typo-h4-size-small};
+    --typo-h1-size: #{$typo-h1-size-small};
     --typo-lead-size: #{$typo-lead-size-small};
     --typo-text-size: #{$typo-text-size-small};
     --typo-small-size: #{$typo-small-size-small};
   }
 
   @include screen-medium-up {
-    --typo-big-digits-size: #{$typo-big-digits-size-medium};
-    --typo-big-h1-size: #{$typo-big-h1-size-medium};
-    --typo-libel-h2-size: #{$typo-libel-h2-size-medium};
-    --typo-libel-h3-size: #{$typo-libel-h3-size-medium};
-    --typo-libel-h4-size: #{$typo-libel-h4-size-medium};
-    --typo-h1-size: #{$typo-h1-size-medium};
+    --typo-big-h1-size: #{$typo-h1-size-medium};
     --typo-h2-size: #{$typo-h2-size-medium};
     --typo-h3-size: #{$typo-h3-size-medium};
     --typo-h4-size: #{$typo-h4-size-medium};
+    --typo-h1-size: #{$typo-h1-size-medium};
     --typo-lead-size: #{$typo-lead-size-medium};
     --typo-text-size: #{$typo-text-size-medium};
     --typo-small-size: #{$typo-small-size-medium};
   }
 
   @include screen-large-up {
-    --typo-big-digits-size: #{$typo-big-digits-size-large};
-    --typo-big-h1-size: #{$typo-big-h1-size-large};
-    --typo-libel-h2-size: #{$typo-libel-h2-size-large};
-    --typo-libel-h3-size: #{$typo-libel-h3-size-large};
-    --typo-libel-h4-size: #{$typo-libel-h4-size-large};
-    --typo-h1-size: #{$typo-h1-size-large};
+    --typo-big-h1-size: #{$typo-h1-size-large};
     --typo-h2-size: #{$typo-h2-size-large};
     --typo-h3-size: #{$typo-h3-size-large};
     --typo-h4-size: #{$typo-h4-size-large};
+    --typo-h1-size: #{$typo-h1-size-large};
     --typo-lead-size: #{$typo-lead-size-large};
     --typo-text-size: #{$typo-text-size-large};
     --typo-small-size: #{$typo-small-size-large};
   }
 
   @include screen-huge-up {
-    --typo-big-digits-size: #{$typo-big-digits-size-huge};
-    --typo-big-h1-size: #{$typo-big-h1-size-huge};
-    --typo-libel-h2-size: #{$typo-libel-h2-size-huge};
-    --typo-libel-h3-size: #{$typo-libel-h3-size-huge};
-    --typo-libel-h4-size: #{$typo-libel-h4-size-huge};
-    --typo-h1-size: #{$typo-h1-size-huge};
+    --typo-big-h1-size: #{$typo-h1-size-huge};
     --typo-h2-size: #{$typo-h2-size-huge};
     --typo-h3-size: #{$typo-h3-size-huge};
     --typo-h4-size: #{$typo-h4-size-huge};
+    --typo-h1-size: #{$typo-h1-size-huge};
     --typo-lead-size: #{$typo-lead-size-huge};
     --typo-text-size: #{$typo-text-size-huge};
     --typo-small-size: #{$typo-small-size-huge};
   }
 
   @include screen-min($grid-container-huge-max + 1px) {
-    --typo-big-digits-size: #{$typo-big-digits-size-huge-up};
-    --typo-big-h1-size: #{$typo-big-h1-size-huge-up};
-    --typo-libel-h2-size: #{$typo-libel-h2-size-huge-up};
-    --typo-libel-h3-size: #{$typo-libel-h3-size-huge-up};
-    --typo-libel-h4-size: #{$typo-libel-h4-size-huge-up};
     --typo-h1-size: #{$typo-h1-size-huge-up};
     --typo-h2-size: #{$typo-h2-size-huge-up};
     --typo-h3-size: #{$typo-h3-size-huge-up};
@@ -262,17 +176,7 @@ $typo-small-size-huge: $typo-small-size-huge-up;
   }
 }
 
-/// The design system's infographics digits variable size.
-$typo-big-digits-size: var(--typo-big-digits-size);
 /// The design system's big h1 heading's variable size.
-$typo-big-h1-size: var(--typo-big-h1-size);
-/// The design system's Libel h2 heading's variable size.
-$typo-libel-h2-size: var(--typo-libel-h2-size);
-/// The design system's Libel h3 heading's variable size.
-$typo-libel-h3-size: var(--typo-libel-h3-size);
-/// The design system's Libel h4 heading's variable size.
-$typo-libel-h4-size: var(--typo-libel-h4-size);
-/// The design system's h1 heading's variable size.
 $typo-h1-size: var(--typo-h1-size);
 /// The design system's h2 heading's variable size.
 $typo-h2-size: var(--typo-h2-size);
@@ -280,6 +184,8 @@ $typo-h2-size: var(--typo-h2-size);
 $typo-h3-size: var(--typo-h3-size);
 /// The design system's h4 heading's variable size.
 $typo-h4-size: var(--typo-h4-size);
+/// The design system's h1 heading's variable size.
+$typo-lead-size: var(--typo-lead-size);
 /// The design system's default text's variable size.
 $typo-text-size: var(--typo-text-size);
 /// The design system's small text's variable size.

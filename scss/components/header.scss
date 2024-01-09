@@ -7,7 +7,7 @@ header {
   align-items: center;
   background: rgb($color-black, 0.64);
   color: $color-white;
-  @include indent-inner($indent-32, $grid-gutter-size, true);
+  @include padding($indent-32, $grid-gutter-size);
   border-bottom: 4px solid $color-black;
 }
 

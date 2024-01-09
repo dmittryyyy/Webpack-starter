@@ -20,69 +20,30 @@
 }
 
 /// A mixin for applying `font-size` and `line-height` values according to the design system for
-/// the infographics digits.
-@mixin typo-make-big-digits() {
-  @include typo-make-sizes($typo-big-digits-size, 1);
-}
-/// A mixin for applying `font-size` and `line-height` values according to the design system for
 /// the big h1 heading.
-@mixin typo-make-big-h1() {
-  @include typo-make-sizes($typo-big-h1-size, 4px);
-}
-/// A mixin for applying `font-size` and `line-height` values according to the design system for
-/// the Libel h2 heading.
-@mixin typo-make-libel-h2() {
-  @include typo-make-sizes($typo-libel-h2-size, 4px);
-}
-/// A mixin for applying `font-size` and `line-height` values according to the design system for
-/// the Libel h3 heading.
-@mixin typo-make-libel-h3() {
-  @include typo-make-sizes($typo-libel-h3-size, 4px);
-}
-/// A mixin for applying `font-size` and `line-height` values according to the design system for
-/// the Libel h4 heading.
-@mixin typo-make-libel-h4() {
-  @include typo-make-sizes($typo-libel-h4-size, 4px);
-}
-/// A mixin for applying `font-size` and `line-height` values according to the design system for
-/// the h1 heading.
 @mixin typo-make-h1() {
-  @include typo-make-sizes($typo-h1-size);
+  @include typo-make-sizes($typo-h1-size, 4px);
 }
 /// A mixin for applying `font-size` and `line-height` values according to the design system for
 /// the h2 heading.
 @mixin typo-make-h2() {
-  @include typo-make-sizes($typo-h2-size);
+  @include typo-make-sizes($typo-h2-size, 4px);
 }
 /// A mixin for applying `font-size` and `line-height` values according to the design system for
 /// the h3 heading.
 @mixin typo-make-h3() {
-  @include typo-make-sizes($typo-h3-size);
+  @include typo-make-sizes($typo-h3-size, 4px);
 }
 /// A mixin for applying `font-size` and `line-height` values according to the design system for
 /// the h4 heading.
 @mixin typo-make-h4() {
-  @include typo-make-sizes($typo-h4-size);
+  @include typo-make-sizes($typo-h4-size, 4px);
 }
 
 /// A mixin for applying `font-size` and `line-height` values according to the design system for
 /// the lead text.
 @mixin typo-make-lead {
   @include typo-make-sizes($typo-lead-size);
-}
-
-/// A mixin for applying `font-size` and `line-height` values according to the design system for
-/// the h5 heading.
-/// @param {Boolean} $isHeading [true] - Whether styles are applying to some sort of heading.
-@mixin typo-make-h5($isHeading: true) {
-  @include typo-make-sizes($typo-h5-size, $isHeading);
-}
-
-/// A mixin for applying `font-size` and `line-height` values according to the design system for
-/// the navigation link.
-/// @param {Boolean} $isHeading [true] - Whether styles are applying to some sort of heading.
-@mixin typo-make-navigation($isHeading: true) {
-  @include typo-make-sizes($typo-navigation-size, $isHeading);
 }
 
 /// A mixin for applying `font-size` and `line-height` values according to the design system for
@@ -104,7 +65,7 @@
   background-position: 100% calc(100% + 1px);
   background-size: calc(200% + 1px) 1px;
   background-repeat: repeat-x;
-  transition: background-position $color-transition-settings;
+  transition: background-position .6s;
 
   &.blur {
     background-position-x: -100%;
